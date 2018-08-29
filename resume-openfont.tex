@@ -1,3 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[]{resume-openfont}
 
 
@@ -19,9 +65,9 @@
 
 \namesection{Abheet}{Verma}
 {
-\textbf{Aspiring to become a member of the core team, where I can enhance my domain knowledge,analytical and logical skills}
+\textbf{Aspiring to become a member of the team, where I can enhance my domain knowledge, analytical and logical skills}
 \urlstyle{same} \\
-\href{mailto:abheetverma099@gmail.com}{abheetverma099@gmail.com} | 9455060668\\Noida
+\href{mailto:abheetverma099@gmail.com}{abheetverma099@gmail.com} | 6393356399\\Noida
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,17 +86,17 @@
 
 \subsection{JSS Academy OF Technical Education}
 \descript{B.Tech in Computer Science}
-\location{Expected July 2019 | Noida, UP \\ Cum. \%: 71\%}
+\location{Expected July 2019 | Noida, UP \\ Cum. \%: 70.5\%}
 \sectionsep
 
 
 
 \subsection{City Montessori School}
-\location{Class 12 March 2015|  Lucknow, UP\\ISC Board  Percentage:96.25\%}
+\location{Intermediate March 2015|  Lucknow, UP\\ISC Board  Percentage:96.25\%}
 \sectionsep
 
 \subsection{St.Dominic Savio College}
-\location{Class 10 March 2013|  Lucknow, UP\\ICSE Board   Percentage:93.4\%}
+\location{High School March 2013|  Lucknow, UP\\ICSE Board   Percentage:93.4\%}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,6 +121,7 @@ Data Structure\\
 Operating Systems \\
 Algorithms \\
 BackEnd Developement \\
+Robotics \\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,24 +131,21 @@ BackEnd Developement \\
 \section{Skills}
 \subsection{Languages}
 Java \textbullet{}   C \textbullet{} C++ \textbullet{} Python \\
-JavaScript \textbullet{} Python \textbullet{} \LaTeX\ \\ 
+JavaScript
 \subsection{Tools}
 Sublime Text \textbullet{} Git \textbullet{} Intellij Idea \textbullet{} Eclipse  \\
-Webstorm
+Webstorm \textbullet{} ROS
 \subsection{OS}
-Windows \textbullet{} Linux \textbullet{} ROS
+Windows \textbullet{} Linux
 \subsection{Framework}
 AngularJs \textbullet{} NodeJs \textbullet{} ExpressJs \textbullet{}
 \subsection{Database}
-Sql \textbullet{} Mongodb 
+MySql \textbullet{} Mongodb \textbullet{} 
 \sectionsep
 
 \section{Personal Info}
 Father's Name:Akhilesh Verma\\
 Mother's Name:Mamta\\
-Sex:Male\\
-Nationality:Indian\\
-Date Of Birth:01/03/1997\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -119,12 +163,28 @@ Date Of Birth:01/03/1997\\
 
 \section{Projects}
 
-\runsubsection{Moviebase}\\
+\runsubsection{Environment Monitoring Using UAVs}\\
 %\descript{| KPCB Fellow + Software Engineering Intern }
-\location{June 2017 – July 2017}
+\location{May 2018 – July 2018}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}\item A moviebase application made on Krakenjs a javascript framework\item Deployed the same on the heroku platform
+\begin{tightemize}\item Environment monitoring is of utmost importance in many applications.\item The monitoring was done using autonomous UAVs and its server was hosted using Flask on Raspberry Pi.
 \end{tightemize}
+\sectionsep
+
+
+
+\runsubsection{UAV-Navigation and Localisation}
+\descript{eYantra Robotics Competition}
+\location{Dec 2017 – Mar 2018 }
+\begin{tightemize}
+\item Worked on ROS i.e. Robot Operating System to interface with a drone using a python script\item The drone had to land on the sparkv bot running on the ground that was programmed using Embedded C.\end{tightemize}
+\sectionsep
+
+\runsubsection{Autonomous Water Rover}\\
+%\descript{| Software Engineering Intern }
+\location{Aug 2017 - Jan 2018 }
+\begin{tightemize}
+\item A rover for water surveillance controllable using IOT server hosted on Raspberry Pi with the help of Flask. \end{tightemize}
 \sectionsep
 
 \runsubsection{OCR-Text Recognition}\\
@@ -134,19 +194,8 @@ Date Of Birth:01/03/1997\\
 \item Worked on the Optical Character Recognition API developed by Google that takes image or pdf as input and parses data from it.\item Created a JSP form for image submission.\end{tightemize}
 \sectionsep
 
-\runsubsection{Chaser Drone}
-\descript{eYantra Robotics Competition}
-\location{Dec 2017 – Mar 2018 }
-\begin{tightemize}
-\item Worked on ROS i.e. Robot Operating System to interface with a drone using a python script \item I programmed the drone using feedback control PID algorithm\item The drone had to land on the sparkv bot running on the ground that was programmed using Embedded C.\end{tightemize}
-\sectionsep
 
-\runsubsection{Chat App using Socket.io}\\
-%\descript{| Software Engineering Intern }
-\location{Feb 2017 }
-\begin{tightemize}
-\item A real time chat app where different users can interact with each other using the portal\item The backend was done using Nodejs\end{tightemize}
-\sectionsep
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
@@ -155,29 +204,28 @@ Date Of Birth:01/03/1997\\
 \section{Achievements} 
 \begin{tabular}{rll}
 2018	     & top 4/202  & eYantra Robotics Competition\\
-2017	     & 1740  & 3 star coder on codechef\\
-2017	     & 2\textsuperscript{nd}/50  & Algothematics,College Fest\\
+2018	     & 1740  & 3 star coder on codechef\\
 2018	     & National  & Kronothon Finalist
 \end{tabular}
 \sectionsep
-\section{Training }
+\section{Internships }
 
-\runsubsection{Microsoft .Net}\\
-\location{June 2017 – July 2017}
-Developed an E-commerce website prototype using ASP.Net and C sharp
+\runsubsection{IIT Bombay}\\
+\location{May 2018 – July 2018}
+Developed a Environment Sensing Device which can monitor surroundings.Worked on UAVs with Navio as Autopilot Hat with Raspberry Pi as Companion Computer. 
 \sectionsep
-\section{Certifications}
-\runsubsection{Algorithms}\\
-\location{April 2018-Ongoing}
-A course on algorithms on Coursera by Stanford University
+\section{Certifications }
+\runsubsection{Machine Learning}\\
+\location{July 2018-Ongoing}
+A course on elementary machine learning on Coursera by Stanford University.
 \sectionsep
 \section{Other Information }
+Member of the coding society of the college\\
 \begin{tabular}{rll}
-Soft SKills & TeamWork,Time Management,Flexibility\\
+Languages known & Hindi and English\\
 Interests & IOT,Robotics,Competitve Coding\\
-Hobbies & Coding,Listening Music,Counter Strike Go
-\end{tabular}\\
-All the information mentioned in the resume are correct to the best of my knowledge and believe.
+Hobbies & Coding,Listening Music,CSGO
+\end{tabular}
 \sectionsep
 \end{minipage} 
 \end{document}
